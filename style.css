@@ -1,0 +1,184 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+	background-color: #666;
+	padding: 30px;
+	text-align: center;
+	font-size: 35px;
+	color: white;
+}
+
+/* this is for the inut/output*/
+nav {
+	float: left;
+	width: 10%;
+	background: #ccc;
+	padding: 20px;
+}
+
+/* this is for the inut/output*/
+nav ul {
+	list-style-type: none;
+	display: inline-block;
+	float: none;
+	padding: 10px;
+}
+
+#input {
+	display: block;
+	/* float: left; */
+}
+
+#output {
+	display: none;
+	float: left;
+	width: 80%;
+	/* height: 100; */
+	/* float: right; */
+}
+#inputOption {
+	float: left;
+	font-weight: bold;
+}
+
+#outputOption {
+	float: left;
+}
+
+#array1 {
+	color: blue;
+	font-weight: bold;
+}
+
+#array2 {
+	color: blue;
+	font-weight: bold;
+}
+/* Clear floats after the columns */
+section:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.tdOutput {
+	white-space: nowrap;
+	font-weight: bold;
+}
+
+/* Style the footer */
+footer {
+	background-color: #777;
+	padding: 7px;
+	text-align: center;
+	color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 900px) {
+	nav,
+	article {
+		width: 100%;
+		height: auto;
+	}
+	#inputOption {
+		float: left;
+		padding-right: 10%;
+	}
+
+	#outputOption {
+		float: left;
+	}
+	p {
+		padding: 15px;
+	}
+}
+
+#row-1 {
+	background-color: rgba(153, 17, 17, 0.897);
+	padding-left: 25%;
+
+	/* padding-top: 60%; */
+}
+#row-2 {
+	background-color: rgb(247, 140, 53);
+}
+#row-3 {
+	background-color: rgb(255, 196, 0);
+}
+#row-4 {
+	background-color: rgba(0, 247, 255, 0.836);
+}
+#row-5 {
+	background-color: rgb(9, 4, 59);
+}
+#row-6 {
+	background-color: rgb(104, 11, 158);
+}
+#row-7 {
+	background-color: rgb(207, 19, 160);
+}
+#row-8 {
+	background-color: rgb(14, 13, 11);
+}
+#headerDataCell {
+	font-size: 70%;
+	height: 3px;
+}
+
+#empty {
+	background-color: white;
+	border: 20px white;
+}
+
+table {
+	/* border-collapse: collapse; */
+	width: 90%;
+	height: 100px;
+	padding: 0;
+}
+
+td {
+	border: 2px solid black;
+	width: 33%;
+	text-align: center;
+	padding: 0px;
+	color: white;
+}
+
+.tdOutput {
+	border: none;
+	width: 10%;
+	text-align: center;
+	padding: 0px;
+	color: black;
+}
+
+select {
+	background-color: rgba(255, 255, 255, 0.705);
+	color: black;
+	padding: 0px;
+	bottom: 0px;
+	height: 25px;
+	text-align-last: center;
+	position: relative;
+
+	background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right
+		#ddd;
+	appearance: none;
+	-moz-appearance: none; /* Firefox */
+	-webkit-appearance: none; /* Safari and Chrome */
+	background-size: 10px;
+	background-position-x: 99%;
+}
+img {
+	float: left;
+	width: 100;
+	height: 100;
+}

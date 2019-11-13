@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<script type="text/javascript" src="./index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+ <!-- the table shown in rows and columns -->
+<body>
+  <header>
+    <h2>Scénario d'élascité prix</h2>
+  </header>
+
+  <section>
+    <nav>
+      <ul>
+        <li><a href="#" id="inputOption" onclick="showInput()"> Inputs </a></li> 
+      <li> <a href="#" id="outputOption" onclick="showOutput()">Output</a></li>
+      </ul>
+    </nav>
+    <div id="input">
+      <table  id= "tableInput" cellspacing="30">
+        <tr id="row-1">
+          <td>
+            <p id="headerDataCell">Price Shift Alpha</p>
+            <select name="Price Shift Alpha" style="width:100%">
+              <option value="0">0%</option>
+              <option value="25">25%</option>
+              <option value="50">50%</option>
+              <option value="75">75%</option>
+              <option value="100">100%</option>
+            </select>
+          </td>
+          <td>
+            <p id="headerDataCell">High Data Tariff (Alpha only)</p>
+            <select name="High Data Tariff (Alpha only)" style="width:100%">
+              <option value="0">0GB</option>
+              <option value="5">5GB</option>
+              <option value="10">10GB</option>
+              <option value="15">15GB</option>
+              <option value="20">20GB</option>
+            </select>
+          </td>
+          <td>
+            <p id="headerDataCell">Unlimited Tariff Alpha</p>
+            <select name="Unlimited Tariff Alpha" style="width:100%">
+              <option value="available">available</option>
+              <option value="not available">not available</option>
+            </select>
+          </td>
+        </tr>
+        <!-- for the second row -->
+      <tr id="row-2">
+          <td>
+            <p id="headerDataCell">Price Shift Beta</p>
+            <select name="Price Shift Alpha" style="width:100%">
+              <option value="0">0%</option>
+              <option value="25">25%</option>
+              <option value="50">50%</option>
+              <option value="75">75%</option>
+              <option value="100">100%</option>
+            </select>
+          </td>
+          <td id="empty">
+          </td>
+          <td>
+            <p id="headerDataCell">Unlimited Tariff Betta</p>
+            <select name="Unlimited Tariff Beta" style="width:100%">
+              <option value="available">available</option>
+              <option value="not available">not available</option> -->
+            </select>
+          </td>
+        </tr>
+        <!-- for the third row -->
+
+        <tr id="row-3">
+          <td>
+            <p id="headerDataCell">Price Shift Gamma</p>
+            <select name="Price Shift Gamma" style="width:100%">
+              <option value="0">0%</option>
+              <option value="25">25%</option>
+              <option value="50">50%</option>
+              <option value="75">75%</option>
+              <option value="100">100%</option>
+            </select>
+          </td>
+          <td id="empty">
+          </td>
+          <td>
+            <p id="headerDataCell">Unlimited Tariff Gamma</p>
+            <select name="Unlimited Tariff Gamma" style="width:100%">
+              <option value="available">available</option>
+              <option value="not available">not available</option>
+            </select>
+          </td>
+        </tr>
+        <!-- for the fourth row -->
+
+        <tr id="row-4">
+          <td>
+            <p id="headerDataCell">Price Shift Epsilon</p>
+            <select name="Price Shift Epsilon" style="width:100%">
+              <option value="0">0%</option>
+              <option value="25">25%</option>
+              <option value="50">50%</option>
+              <option value="75">75%</option>
+              <option value="100">100%</option>
+            </select>
+          </td>
+          <td id="empty">
+          </td>
+          <td>
+            <p id="headerDataCell">Unlimited Tariff Epsilon</p>
+            <select name="Unlimited Tariff Epsilon" style="width:100%">
+              <option value="available">available</option>
+              <option value="not available">not available</option>
+            </select>
+          </td>
+        </tr>
+        <!-- for the fifth row -->
+
+        <tr id="row-5">
+          <td>
+            <p id="headerDataCell">Price Shift Mobile</p>
+            <select name="Price Shift Mobile" style="width:100%">
+              <option value="0">0%</option>
+              <option value="25">25%</option>
+              <option value="50">50%</option>
+              <option value="75">75%</option>
+              <option value="100">100%</option>
+            </select>
+          </td>
+          <td id="empty">
+          </td>
+          <td>
+            <p id="headerDataCell">Unlimited Tariff Mobile</p>
+            <select name="Unlimited Tariff Mobile" style="width:100%">
+              <option value="available">available</option>
+              <option value="not available">not available</option> -->
+            </select>
+          </td>
+        </tr>
+        <!-- for the sixth row -->
+
+        <tr id="row-6">
+          <td>
+            <p id="headerDataCell">Price Shift Lota</p>
+            <select name="Price Shift Lota" style="width:100%">
+              <option value="0">0%</option>
+              <option value="25">25%</option>
+              <option value="50">50%</option>
+              <option value="75">75%</option>
+              <option value="100">100%</option>
+            </select>
+          </td>
+          <td id="empty">
+          </td>
+          <td>
+            <p id="headerDataCell">Unlimited Tariff Mobile</p>
+            <select name="Unlimited Tariff Mobile" style="width:100%">
+              <option value="available">available</option>
+              <option value="not available">not available</option> -->
+            </select>
+          </td>
+        </tr>
+        <!-- for the seventh row -->
+
+        <tr id="row-7">
+          <td>
+            <p id="headerDataCell">Price Shift Theta</p>
+            <select name="Price Shift Theta" style="width:100%">
+              <option value="0">0%</option>
+              <option value="25">25%</option>
+              <option value="50">50%</option>
+              <option value="75">75%</option>
+              <option value="100">100%</option>
+            </select>
+          </td>
+          <td id="empty">
+          </td>
+          <td>
+            <p id="headerDataCell">Unlimited Tariff Mobile</p>
+            <select name="Unlimited Tariff Theta" style="width:100%">
+              <option value="available">available</option>
+              <option value="not available">not available</option> -->
+            </select>
+          </td>
+        </tr>
+        <!-- for the eigth row -->
+
+        <tr id="row-8">
+          <td>
+            <p id="headerDataCell">Price Shift Kappa</p>
+            <select name="Price Shift Kappa" style="width:100%">
+              <option value="0">0%</option>
+              <option value="25">25%</option>
+              <option value="50">50%</option>
+              <option value="75">75%</option>
+              <option value="100">100%</option>
+            </select>
+          </td>
+          <td id="empty">
+          </td>
+          <td>
+            <p id="headerDataCell">Unlimited Tariff Kappa</p>
+            <select name="Unlimited Tariff Kappa" style="width:100%">
+              <option value="available">available</option>
+              <option value="not available">not available</option> -->
+            </select>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- handling the output -->
+
+    <div id="output">
+      <img src="" id="picture"/>
+      <table  cellspacing="30"> 
+          <tbody id="tableOutput">
+            
+          </tbody>           
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <!-- <p>Footer</p> -->
+  </footer>
+
+</body>
+
+</html>
