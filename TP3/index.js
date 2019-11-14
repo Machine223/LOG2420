@@ -18,16 +18,50 @@ function showOutput() {
 
 // Aternating between the image and the json output
 
-async function changeImage() {
+function changeImage() {
+
 	document.getElementById('input').style.display = 'none';
 	if (inputHasBeenChanged) {
-		
+
+		// Bar chart
+		chart = new Chart(document.getElementById("bar-graph"), {
+			type: 'bar',
+			data: {
+			  labels: ["Product 1", "Product 2", "Product 3", "Product 4"],
+			  datasets: [
+				{
+				  label: "Company A",
+				  backgroundColor: "#3e95cd",
+				  data: [133,221,783,2478]
+				}, {
+				  label: "Company B",
+				  backgroundColor: "#8e5ea2",
+				  data: [408,547,675,734]
+				}
+			  ]
+			},
+			options: {
+			  title: {
+				display: true,
+				text: 'Price ($CAD)'
+			  }
+			}
+		});
+		console.log('data', chart.data, document.getElementsByName("Price Shift Kappa")[0].value);
+		chart.data.datasets[0].data[1] = parseInt(document.getElementsByName("Price Shift Kappa")[0].value);
+		chart.update();
+
+
 	} else {
 		
 	}
+
+	
+	
 }
 // generating the data: from the json to the HTML DOM
 
 function generateOutput(data) {
 	//document.getElementById('picture').setAttribute('src', '');
 }
+
