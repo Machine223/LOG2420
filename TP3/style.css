@@ -37,7 +37,7 @@ nav ul {
 }
 
 #output {
-	display: none;
+	display: flex;
 	float: left;
 	width: 80%;
 	/* height: 100; */
