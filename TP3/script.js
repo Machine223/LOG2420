@@ -154,6 +154,7 @@ function reset() {
 	document.getElementById('range_slider_value8').innerHTML = '0';
 
 	console.log('reset button is pressed reset all value!');
+	updateGraph();
 }
 
 function updateGraph() {
