@@ -1,5 +1,7 @@
+
 var barChart;
 var horizontalBarChart_A, horizontalBarChart_B ;
+
 var inputList = ["Price Shift Alpha", "High Data Tariff (Alpha only)", "Price Shift Beta", "Price Shift Gamma"];
 var competitorDataList = [100,80,30,50];
 var products = ["Product 1", "Product 2", "Product 3", "Product 4"];
@@ -112,21 +114,22 @@ function createGraph() {
 		horizontalBarChart_B.data.labels[i] = '';
 		horizontalBarChart_B.data.datasets[0].data[i] = competitorDataList[i];
 	}
-	console.log("lol", horizontalBarChart_B.data);
-	barChart.update();
-	horizontalBarChart_A.update();
-	horizontalBarChart_B.update();
+	chart.update();
+	
 }
 
-function updateGraph(){
-	//Bar Graph
-	console.log(barChart.data);
+/* CODE ABDE */
 
-	for ( i=0; i< inputList.length; i++){
-		barChart.data.datasets[0].data[i] = parseInt(document.getElementsByName(inputList[i])[0].value);
-		horizontalBarChart_A.data.datasets[0].data[i] = parseInt(document.getElementsByName(inputList[i])[0].value);
-	}
-	barChart.update();
-	horizontalBarChart_A.update();
-	horizontalBarChart_B.update();
-}
+/* CODE ABDE */
+
+
+
+
+
+
+
+
+
+
+
+
