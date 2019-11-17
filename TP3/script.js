@@ -9,6 +9,7 @@ function loadPage() {
 	for (i = 0; i < inputList.length; i++) {
 		document.getElementById(inputList[i]).addEventListener('change', () => updateGraph());
 	}
+	SwitchGraph();
 }
 
 // Aternating between the image and the json output
@@ -170,28 +171,19 @@ function updateGraph() {
 
 // this functions allows us to show or hide the graphs
 
-function myFunctionGraphe() {
-	console.log('Graphe B');
-	var x = document.getElementById('bar-graph');
-	var y = document.getElementById('bar-chart-horizontal_B');
-	var z = document.getElementById('bar-chart-horizontal_A');
+function SwitchGraph() {
+	barGraph_ = document.getElementById('bar-graph');
+	barHorizontal_A = document.getElementById('bar-chart-horizontal_A');
+	barHorizontal_B = document.getElementById('bar-chart-horizontal_B');
 
-	if (x.style.display === 'block') {
-		y.style.display = 'none';
-		z.style.display = 'none';
-	} else {
-		x.style.display = 'block';
+	if (barHorizontal_A.style.display === 'block' && barHorizontal_B.style.display === 'block'){
+		barHorizontal_A.style.display = "none";
+		barHorizontal_B.style.display = "none";
+		barGraph_.style.display = 'block';
 	}
-}
-
-function myFunction() {
-	var x = document.getElementById('bar-graph');
-	var y = document.getElementById('bar-chart-horizontal_B');
-	var z = document.getElementById('bar-chart-horizontal_A');
-	if (y.style.display === 'block' && z.style.display === 'block') {
-		x.style.display = 'none';
-	} else {
-		y.style.display === 'block';
-		z.style.display === 'block';
+	else{
+		barHorizontal_A.style.display = "block";
+		barHorizontal_B.style.display = "block";
+		barGraph_.style.display = 'none';
 	}
 }

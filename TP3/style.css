@@ -4,6 +4,7 @@
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
+	
 }
 
 /* Style the header */
@@ -37,11 +38,7 @@ nav ul {
 }
 
 #output {
-	display: flex;
-	float: left;
-	width: 80%;
-	/* height: 100; */
-	/* float: right; */
+	
 }
 #inputOption {
 	float: left;
@@ -182,74 +179,65 @@ img {
 	width: 100;
 	height: 100;
 }
+
+
+#bar-graph {
+	width: 400;
+	height: 800;
+	max-width:800;
+	max-height:400;
+}
+
+#bar-chart-horizontal_A {
+	width: 800;
+	height: 1600;
+	max-width:800;
+	max-height: 1600;
+}
+
 #bar-chart-horizontal_B {
-	max-width: 40;
-	max-height: 25;
-	/* -moz-transform: scale(-1, 1);
+	width: 800;
+	height: 1600;
+	max-width:800;
+	max-height:1600;
+	-moz-transform: scale(-1, 1);
 	-webkit-transform: scale(-1, 1);
 	-o-transform: scale(-1, 1);
 	-ms-transform: scale(-1, 1);
-	transform: scale(-1, 1); */ /* this is useless*/
-
-	position: absolute;
-	width: 400px;
-	height: 400px;
-	bottom: -190px;
-	right: 25%;
-	left: 35%;
-	margin-left: 100px;
-}
-#bar-chart-horizontal_A {
-	margin-left: 50px;
-	width: 400px;
-	height: 400px;
-	bottom: -10px;
-	right: 25%;
-	left: 35%;
+	transform: scale(-1, 1);
 }
 
-#bar-graph {
-	max-width: 40;
-	max-height: 25;
-	padding: 20px 25px;
-}
 
 /* CODE ABDE */
 .container-input {
 	margin: 40px 0;
-	width: 400px;
+	width: 400px;	
 	height: 800px;
 	padding: 25px 25px;
-	background: rgb(52, 54, 56);
+	background:rgb(52, 54, 56);
 	/* border-radius: 10px; */
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.45), 0 4px 8px rgba(0, 0, 0, 0.35), 0 8px 12px rgba(0, 0, 0, 0.15);
 	text-transform: uppercase;
 }
-.container-output {
-	margin: 40px 0;
-	width: 400px;
-	height: 800px;
-	padding: 25px 25px;
-	background: rgb(52, 54, 56);
-	/* border-radius: 10px; */
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.45), 0 4px 8px rgba(0, 0, 0, 0.35), 0 8px 12px rgba(0, 0, 0, 0.15);
-	text-transform: uppercase;
-}
+
+
+
 .container-input h2.title {
 	font-size: 1.75rem;
 	margin: 10px -5px;
 	margin-bottom: 30px;
 	color: rgb(255, 255, 255);
-	background: rgb(52, 54, 56);
+	background:rgb(52, 54, 56);
 }
-.title {
+.title{
 	color: rgb(0, 0, 0);
+	
 }
 
 .slider {
 	-webkit-appearance: none;
 	width: 260px;
-	height: 5px;
+	height: 5px;		
 	border-radius: 10px;
 	background: rgba(255, 255, 255, 0.767);
 	outline: none;
@@ -257,12 +245,12 @@ img {
 	margin: 15px;
 	cursor: pointer;
 }
-
+	
 .field-title {
 	position: absolute;
 	top: -22px;
 	left: 8px;
-
+	
 	font-weight: 500;
 	color: rgb(255, 248, 248);
 	text-transform: uppercase;
@@ -283,46 +271,52 @@ img {
 	margin: 30px 0;
 }
 
-.range_slider_value {
+.range_slider_value{
+	
+	
 	margin: 0;
 	top: 0px;
 	left: -10px;
 	font-weight: 500;
-
+	
 	font-size: 1.3rem;
 	pointer-events: none;
 	user-select: none;
 	display: inline-block;
-	position: relative;
-	width: 60px;
-	color: #fff;
+    position: relative;
+    width: 60px;
+    color: #fff;
+   
+    text-align: center;
+    border-radius: 3px;
+    background: #2c3e50;
+    padding: 5px 10px;
+    margin-left: 4px;
 
-	text-align: center;
-	border-radius: 3px;
-	background: #2c3e50;
-	padding: 5px 10px;
-	margin-left: 4px;
 }
 .range-slider__value:after {
-	position: absolute;
-	top: 8px;
-	left: -7px;
-	width: 0;
-	height: 0;
-	border-top: 7px solid transparent;
-	border-right: 7px solid #2c3e50;
-	border-bottom: 7px solid transparent;
-	content: '';
+    position: absolute;
+    top: 8px;
+    left: -7px;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-right: 7px solid #2c3e50;
+    border-bottom: 7px solid transparent;
+    content: '';
 }
 
-a {
+
+
+
+a{
 	margin: 0 20px;
 	color: rgb(0, 0, 0);
 	font-size: 2rem;
 	transition: all 400ms ease;
 }
 
-a:hover {
+a:hover{
 	color: #222;
 }
 
@@ -349,11 +343,16 @@ a:hover {
 	transform: translateY(-6%);
 	box-shadow: 0 4px 10px rgba(255, 255, 255, 0.288);
 }
+  
 
-/* CODE ABDE */
-footer {
-	clear: both;
-	position: relative;
-	height: 20px;
-	margin-top: -200px;
+
+.container-output {
+	margin: 40px 0;
+	width: 400px;	
+	height: 800px;
+	padding: 25px 25px;
+	background:rgb(52, 54, 56);
+	/* border-radius: 10px; */
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.45), 0 4px 8px rgba(0, 0, 0, 0.35), 0 8px 12px rgba(0, 0, 0, 0.15);
+	text-transform: uppercase;
 }
