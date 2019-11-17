@@ -35,62 +35,129 @@
       
     <section>
       <div id="input">
-        <div class="container-input">
-          <h2 class="title">Input</h2>
-          
-          <div class="lenght range_slider" data-min="0" data-max="100">
-              <div class="title field-title" data-length='0'>Price Shift Alpha:</div>
-              <input class= "slider" type="range" name="slider" id="Alpha" value="0" min="0" max="100" step="20" 
-                  oninput="range_slider_value.value = Alpha.value" >
-              <output   class="range_slider_value" id="range_slider_value">0</output>
-          </div>
-          <div class="lenght range_slider" data-min="0" data-max="100">
-              <div class="title field-title" data-length='0'>Price Shift Beta:</div>
-              <input class= "slider" type="range" name="slider" id="Beta" value="0" min="0" max="100" step="20" 
-                  oninput="range_slider_value2.value = Beta.value" >
-              <output class="range_slider_value"  id="range_slider_value2">0</output>
-          </div>
-          <div class="lenght range_slider" data-min="0" data-max="100">
-              <div class="title field-title" data-length='0'>Price Shift Gamma:</div>
-              <input class= "slider" type="range" name="slider" id="Gamma" value="0" min="0" max="100" step="20" 
-                  oninput="range_slider_value3.value = Gamma.value" >
-              <output class="range_slider_value"  id="range_slider_value3">0</output>
-          </div>
-          <div class="lenght range_slider" data-min="0" data-max="100">
-              <div class="title field-title" data-length='0'>Price Shift Epsilon:</div>
-              <input class= "slider" type="range" name="slider" id="Epsilon" value="0" min="0" max="100" step="20" 
-                  oninput="range_slider_value4.value = Epsilon.value" >
-              <output class="range_slider_value"  id="range_slider_value4">0</output>
-          </div>
-          <div class="lenght range_slider" data-min="0" data-max="100">
-              <div class="title field-title" data-length='0'>Price Shift Mobile:</div>
-              <input class= "slider" type="range" name="slider" id="Mobile" value="0" min="0" max="100" step="20" 
-                  oninput="range_slider_value5.value = Mobile.value" >
-              <output class="range_slider_value"  id="range_slider_value5">0</output>
-          </div>
-          <div class="lenght range_slider" data-min="0" data-max="100">
-              <div class="title field-title" data-length='0'>Price Shift Iota:</div>
-              <input class= "slider" type="range" name="slider" id="Iota" value="0" min="0" max="100" step="20" 
-                  oninput="range_slider_value6.value = Iota.value" >
-              <output class="range_slider_value"  id="range_slider_value6">0</output>
-          </div>
-          <div class="lenght range_slider" data-min="0" data-max="100">
-              <div class="title field-title" data-length='0'>Price Shift Tetha:</div>
-              <input class= "slider" type="range" name="slider" id="Tetha" value="0" min="0" max="100" step="20" 
-                  oninput="range_slider_value7.value = Tetha.value" >
-              <output class="range_slider_value"  id="range_slider_value7">0</output>
-          </div>
-          <div class="lenght range_slider" data-min="0" data-max="100">
-              <div class="title field-title" data-length='0'>Price Shift Lambda:</div>
-              <input class= "slider" type="range" name="slider" id="Lambda" value="0" min="0" max="100" step="20" 
-                  oninput="range_slider_value8.value = Lambda.value" >
-              <output class="range_slider_value"  id="range_slider_value8">0</output>
-          </div>
-          
-          <button type="reset" onclick="reset()" class="btn reset" id="reset">Reset</button>
+            <div class="container-input" >
+            <h2 class="title">Input</h2>
+            <h2 href="#" class="input" onclick="priceActivated()" >Price</h2>
+            <h2 href="#" class="input" onclick="tariffActivated()">Tarif</h2>
+                <script>
+                    function priceActivated() {
+                        document.getElementById("inputsPrice").style.display = "block";
+                        document.getElementById("inputsTarif").style.display = "none";
+                        console.log("inputsPrice activate");
+                    }
+
+                    function tariffActivated() {
+                        document.getElementById("inputsPrice").style.display = "none";
+                        // option for updated value
+                        document.getElementById("inputsTarif").style.display = "block";
+                        console.log("inputsTarif activide");
+                    }
+                </script>
+            <div id="inputsPrice">
+                <div class="lenght range_slider" data-min="0" data-max="100">
+                    <div class="title field-title" data-length='0'>Price Shift Alpha</div>
+                    <input class= "slider" type="range" name="slider" id="Alpha" value="0" min="0" max="100" step="20" 
+                        oninput="range_slider_value.value = Alpha.value" >
+                    <output   class="range_slider_value" id="range_slider_value">0</output>
+                </div>
+                <div class="lenght range_slider" data-min="0" data-max="100">
+                    <div class="title field-title" data-length='0'>Price Shift Beta</div>
+                    <input class= "slider" type="range" name="slider" id="Beta" value="0" min="0" max="100" step="20" 
+                        oninput="range_slider_value2.value = Beta.value" >
+                    <output class="range_slider_value"  id="range_slider_value2">0</output>
+                </div>
+                <div class="lenght range_slider" data-min="0" data-max="100">
+                    <div class="title field-title" data-length='0'>Price Shift Gamma</div>
+                    <input class= "slider" type="range" name="slider" id="Gamma" value="0" min="0" max="100" step="20" 
+                        oninput="range_slider_value3.value = Gamma.value" >
+                    <output class="range_slider_value"  id="range_slider_value3">0</output>
+                </div>
+                <div class="lenght range_slider" data-min="0" data-max="100">
+                    <div class="title field-title" data-length='0'>Price Shift Epsilon</div>
+                    <input class= "slider" type="range" name="slider" id="Epsilon" value="0" min="0" max="100" step="20" 
+                        oninput="range_slider_value4.value = Epsilon.value" >
+                    <output class="range_slider_value"  id="range_slider_value4">0</output>
+                </div>
+                <div class="lenght range_slider" data-min="0" data-max="100">
+                    <div class="title field-title" data-length='0'>Price Shift Mobile</div>
+                    <input class= "slider" type="range" name="slider" id="Mobile" value="0" min="0" max="100" step="20" 
+                        oninput="range_slider_value5.value = Mobile.value" >
+                    <output class="range_slider_value"  id="range_slider_value5">0</output>
+                </div>
+                <div class="lenght range_slider" data-min="0" data-max="100">
+                    <div class="title field-title" data-length='0'>Price Shift Iota</div>
+                    <input class= "slider" type="range" name="slider" id="Iota" value="0" min="0" max="100" step="20" 
+                        oninput="range_slider_value6.value = Iota.value" >
+                    <output class="range_slider_value"  id="range_slider_value6">0</output>
+                </div>
+                <div class="lenght range_slider" data-min="0" data-max="100">
+                    <div class="title field-title" data-length='0'>Price Shift Tetha</div>
+                    <input class= "slider" type="range" name="slider" id="Tetha" value="0" min="0" max="100" step="20" 
+                        oninput="range_slider_value7.value = Tetha.value" >
+                    <output class="range_slider_value"  id="range_slider_value7">0</output>
+                </div>
+                <div class="lenght range_slider" data-min="0" data-max="100">
+                    <div class="title field-title" data-length='0'>Price Shift Lambda</div>
+                    <input class= "slider" type="range" name="slider" id="Lambda" value="0" min="0" max="100" step="20" 
+                        oninput="range_slider_value8.value = Lambda.value" >
+                    <output class="range_slider_value"  id="range_slider_value8">0</output>
+                </div>
+                <button type="reset" onclick="resetPrice()" class="btn reset" id="reset">Reset</button>
+            </div>
+            <div id="inputsTarif">
+                    <div class="lenght range_slider" data-min="0" data-max="100">
+                         <div class="title field-title" data-length='0'>High Data Tariff(Alpha only)</div>
+                        <input class= "slider" type="range" name="slider" id="TariffDA" value="0" min="0" max="200" step="50" 
+                             oninput="range_slider_value9.value = TariffDA.value" >
+                         <output class="range_slider_value"  id="range_slider_value9">0</output>
+                    </div>
+                    <div class="lenght range_slider" data-min="0" data-max="100">
+                            <div class="title field-title" data-length='0'>Unlimited Tariff Alpha</div>
+                           <input class= "slider" type="range" name="slider" id="TariffA" value="0" min="0" max="10" step="5" 
+                                oninput="range_slider_value10.value = TariffA.value" >
+                            <output class="range_slider_value"  id="range_slider_value10">0</output>
+                     </div>
+                     <div class="lenght range_slider" data-min="0" data-max="100">
+                            <div class="title field-title" data-length='0'>Unlimited Tariff Beta</div>
+                           <input class= "slider" type="range" name="slider" id="TariffB" value="0" min="0" max="10" step="5" 
+                                oninput="range_slider_value11.value = TariffA.value" >
+                            <output class="range_slider_value"  id="range_slider_value11">0</output>
+                     </div>
+                     <div class="lenght range_slider" data-min="0" data-max="100">
+                            <div class="title field-title" data-length='0'>Unlimited Tariff Gamma</div>
+                           <input class= "slider" type="range" name="slider" id="TariffG" value="0" min="0" max="10" step="5" 
+                                oninput="range_slider_value12.value = TariffG.value" >
+                            <output class="range_slider_value"  id="range_slider_value12">0</output>
+                     </div>
+                     <div class="lenght range_slider" data-min="0" data-max="100">
+                            <div class="title field-title" data-length='0'>Unlimited Tariff Epsilon</div>
+                           <input class= "slider" type="range" name="slider" id="TariffE" value="0" min="0" max="10" step="5" 
+                                oninput="range_slider_value13.value = TariffE.value" >
+                            <output class="range_slider_value"  id="range_slider_value13">0</output>
+                     </div>
+                     <div class="lenght range_slider" data-min="0" data-max="100">
+                            <div class="title field-title" data-length='0'>Unlimited Tariff Mobile</div>
+                           <input class= "slider" type="range" name="slider" id="TariffM" value="0" min="0" max="10" step="5" 
+                                oninput="range_slider_value14.value = TariffM.value" >
+                            <output class="range_slider_value"  id="range_slider_value14">0</output>
+                     </div>
+                     <div class="lenght range_slider" data-min="0" data-max="100">
+                            <div class="title field-title" data-length='0'>Unlimited Tariff Iota</div>
+                           <input class= "slider" type="range" name="slider" id="TariffI" value="0" min="0" max="10" step="5" 
+                                oninput="range_slider_value15.value = TariffI.value" >
+                            <output class="range_slider_value"  id="range_slider_value15">0</output>
+                     </div>
+                     <div class="lenght range_slider" data-min="0" data-max="100">
+                            <div class="title field-title" data-length='0'>Unlimited Tariff Theta</div>
+                           <input class= "slider" type="range" name="slider" id="TariffT" value="0" min="0" max="10" step="5" 
+                                oninput="range_slider_value16.value = TariffT.value" >
+                            <output class="range_slider_value"  id="range_slider_value16">0</output>
+                     </div>
+                       <button type="reset" onclick="resetTarif()" class="btn reset" id="reset">Reset</button>
+                </div>
+            </div>
+        </div>
       </div>
-      </div>
-      
     </section>
 <!-- INPUT ABDE --> 
 

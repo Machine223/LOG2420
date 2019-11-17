@@ -215,26 +215,61 @@ img {
 }
 
 /* CODE ABDE */
+#inputsPrice {
+	display: block;
+	
+}
+
+#inputsTarif {
+	display: none;
+	
+}
+
 .container-input {
-	margin: 40px 0;
+	margin: 15px 0;
 	width: 400px;
 	height: 800px;
-	padding: 25px 25px;
+	padding: 3px 15px;
 	background: rgb(52, 54, 56);
 	/* border-radius: 10px; */
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.45), 0 4px 8px rgba(0, 0, 0, 0.35), 0 8px 12px rgba(0, 0, 0, 0.15);
 	text-transform: uppercase;
 }
 .container-input h2.title {
-	font-size: 1.75rem;
-	margin: 10px -5px;
 	margin-bottom: 30px;
-	color: rgb(255, 255, 255);
+	font-size: 1.8rem;
+	display: inline-flex;
+	width: 100%;
+	float: left;
+	padding: 11px;
+	padding-left:20px;
 	background: rgb(52, 54, 56);
-}
-.title {
+	height: 50px;
+	margin: 5px 0;
+	border-radius: 1px;
 	color: rgb(0, 0, 0);
+	border: none;
+	background-image: linear-gradient(135deg, #e2e2e2 0%, #d8d8d8 100%);
 }
+.container-input h2.input {
+	font-size: 1.4rem;
+	display: inline-flex;
+	text-align: center;
+	width: 50%;
+	float: left;
+	border: 20px;
+	padding: 15px;
+	padding-left:55px;
+	background: rgb(52, 54, 56);
+	height: 50px;
+	margin: 0px 0;
+	margin-bottom: 30px;
+	border-radius: 1px;
+	color: #fff;
+	
+	background-image: linear-gradient(135deg, #c83081 0%, #764ba2 100%);
+}
+
 
 .slider {
 	-webkit-appearance: none;
@@ -266,6 +301,7 @@ img {
 	width: 100%;
 	height: calc(65px - 20px);
 	display: flex;
+	padding: 5px;
 	justify-content: center;
 	align-items: center;
 	background: rgba(255, 255, 255, 0.08);
@@ -278,7 +314,7 @@ img {
 	top: 0px;
 	left: -10px;
 	font-weight: 500;
-
+	
 	font-size: 1.3rem;
 	pointer-events: none;
 	user-select: none;
@@ -341,6 +377,8 @@ a:hover {
 }
 
 /* CODE ABDE */
+
+
 footer {
 	clear: both;
 	position: relative;

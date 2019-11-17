@@ -1,13 +1,15 @@
 var barChart;
 var horizontalBarChart_A, horizontalBarChart_B;
 
-var inputList = [ 'Alpha', 'Beta', 'Gamma', 'Epsilon', 'Mobile', 'Iota', 'Tetha', 'Lambda' ];
+var inputPriceList = [ 'Alpha', 'Beta', 'Gamma', 'Epsilon', 'Mobile', 'Iota', 'Tetha', 'Lambda' ];
+var inputTarifList = [ 'TariffDA', 'TariffA', 'TariffB', 'TariffG', 'TariffE', 'TariffM', 'TariffI', 'TariffT' ];
+
 var competitorDataList = [ 100, 80, 30, 50, 100, 80, 30, 50 ];
 // these two functions allows us to show or hide the images depending on wether we changed the inout or not
 function loadPage() {
 	createGraph();
-	for (i = 0; i < inputList.length; i++) {
-		document.getElementById(inputList[i]).addEventListener('change', () => updateGraph());
+	for (i = 0; i < inputPriceList.length; i++) {
+		document.getElementById(inputPriceList[i]).addEventListener('change', () => updateGraph());
 	}
 }
 
@@ -126,10 +128,10 @@ function createGraph() {
 			}
 		}
 	});
-	for (i = 0; i < inputList.length; i++) {
-		barChart.data.labels[i] = inputList[i];
+	for (i = 0; i < inputPriceList.length; i++) {
+		barChart.data.labels[i] = inputPriceList[i];
 		barChart.data.datasets[1].data[i] = competitorDataList[i];
-		horizontalBarChart_A.data.labels[i] = inputList[i];
+		horizontalBarChart_A.data.labels[i] = inputPriceList[i];
 		horizontalBarChart_B.data.labels[i] = '';
 		horizontalBarChart_B.data.datasets[0].data[i] = competitorDataList[i];
 	}
@@ -138,9 +140,9 @@ function createGraph() {
 	horizontalBarChart_B.update();
 }
 
-function reset() {
-	for (i = 0; i < inputList.length; i++) {
-		document.getElementById(inputList[i]).value = '0';
+function resetPrice() {
+	for (i = 0; i < inputPriceList.length; i++) {
+		document.getElementById(inputPriceList[i]).value = '0';
 	}
 
 	document.getElementById('range_slider_value').innerHTML = '0';
@@ -154,14 +156,30 @@ function reset() {
 
 	console.log('reset button is pressed reset all value!');
 }
+function resetTarif() {
+	for (i = 0; i < inputTarifList.length; i++) {
+		document.getElementById(inputTarifList[i]).value = '0';
+	}
+
+	document.getElementById('range_slider_value9').innerHTML = '0';
+	document.getElementById('range_slider_value10').innerHTML = '0';
+	document.getElementById('range_slider_value11').innerHTML = '0';
+	document.getElementById('range_slider_value12').innerHTML = '0';
+	document.getElementById('range_slider_value13').innerHTML = '0';
+	document.getElementById('range_slider_value14').innerHTML = '0';
+	document.getElementById('range_slider_value15').innerHTML = '0';
+	document.getElementById('range_slider_value16').innerHTML = '0';
+
+	console.log('reset button is pressed reset all value!');
+}
 
 function updateGraph() {
 	//Bar Graph
 	console.log(barChart.data);
 
-	for (i = 0; i < inputList.length; i++) {
-		barChart.data.datasets[0].data[i] = parseInt(document.getElementById(inputList[i]).value);
-		horizontalBarChart_A.data.datasets[0].data[i] = parseInt(document.getElementById(inputList[i]).value);
+	for (i = 0; i < inputPriceList.length; i++) {
+		barChart.data.datasets[0].data[i] = parseInt(document.getElementById(inputPriceList[i]).value);
+		horizontalBarChart_A.data.datasets[0].data[i] = parseInt(document.getElementById(inputPriceList[i]).value);
 	}
 	barChart.update();
 	horizontalBarChart_A.update();
