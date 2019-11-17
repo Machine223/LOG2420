@@ -2,15 +2,13 @@
 var barChart;
 var horizontalBarChart_A, horizontalBarChart_B ;
 
-var inputList = ["Price Shift Alpha", "High Data Tariff (Alpha only)", "Price Shift Beta", "Price Shift Gamma"];
-var competitorDataList = [100,80,30,50];
-var products = ["Product 1", "Product 2", "Product 3", "Product 4"];
+var inputList = ["Alpha", "Beta", "Gamma", "Epsilon", "Mobile", "Iota", "Tetha", "Lambda"];
+var competitorDataList = [100,80,30,50,100,80,30,50];
 // these two functions allows us to show or hide the images depending on wether we changed the inout or not
 function loadPage() {
 	createGraph();
-	var input = document.getElementsByTagName('select');
-	for (i = 0; i < input.length; i++) {
-		input[i].addEventListener('change', () => (updateGraph())); // addEventListener used
+	for ( i=0; i< inputList.length; i++){
+		(document.getElementById(inputList[i])).addEventListener('change', () => (updateGraph()));
 	}
 }
 
@@ -60,7 +58,7 @@ function createGraph() {
 		  datasets: [
 			{
 			  label: "",
-			  backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9"],
+			  backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9"],
 			  data: []
 			}
 		  ]
@@ -87,7 +85,7 @@ function createGraph() {
 		  datasets: [
 			{
 			  label: "",
-			  backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9"],
+			  backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9", "#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9"],
 			  data: []
 			}
 		  ]
@@ -107,29 +105,47 @@ function createGraph() {
 		  }
 		}
 	});
-	for ( i=0; i< products.length; i++){
-		barChart.data.labels[i] = products[i];
+	for ( i=0; i< inputList.length; i++){
+		barChart.data.labels[i] = inputList[i];
 		barChart.data.datasets[1].data[i] = competitorDataList[i];
-		horizontalBarChart_A.data.labels[i] = products[i];
+		horizontalBarChart_A.data.labels[i] = inputList[i];
 		horizontalBarChart_B.data.labels[i] = '';
 		horizontalBarChart_B.data.datasets[0].data[i] = competitorDataList[i];
 	}
-	chart.update();
-	
+	barChart.update();
+	horizontalBarChart_A.update();
+	horizontalBarChart_B.update();
 }
 
-/* CODE ABDE */
-
-/* CODE ABDE */
 
 
+function reset() {
+	for ( i=0; i< inputList.length; i++){
+		document.getElementById(inputList[i]).value = "0";
+	}
+	
+	document.getElementById("range_slider_value").innerHTML = "0";
+	document.getElementById("range_slider_value2").innerHTML = "0";
+	document.getElementById("range_slider_value3").innerHTML = "0";
+	document.getElementById("range_slider_value4").innerHTML = "0";
+	document.getElementById("range_slider_value5").innerHTML = "0";
+	document.getElementById("range_slider_value6").innerHTML = "0";
+	document.getElementById("range_slider_value7").innerHTML = "0";
+	document.getElementById("range_slider_value8").innerHTML = "0";
+	
+	console.log("reset button is pressed reset all value!")
+  }
+ 
 
+  function updateGraph(){
+	//Bar Graph
+	console.log(barChart.data);
 
-
-
-
-
-
-
-
-
+	for ( i=0; i< inputList.length; i++){
+		barChart.data.datasets[0].data[i] = parseInt(document.getElementById(inputList[i]).value);
+		horizontalBarChart_A.data.datasets[0].data[i] = parseInt(document.getElementById(inputList[i]).value);
+	}
+	barChart.update();
+	horizontalBarChart_A.update();
+	horizontalBarChart_B.update();
+}
