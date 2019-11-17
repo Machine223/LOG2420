@@ -1,3 +1,5 @@
+
+
 var inputList = ["Price Shift Alpha", "High Data Tariff (Alpha only)", "Price Shift Beta", "Price Shift Gamma"];
 // these two functions allows us to show or hide the images depending on wether we changed the inout or not
 function loadPage() {
@@ -43,7 +45,18 @@ function UpdateGraph() {
 	}
 	chart.update();
 	
-	
-	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 

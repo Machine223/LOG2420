@@ -6,12 +6,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="user-scalable=no, width=device-width" />
   <link rel="stylesheet" type="text/css" href="style.css">
-
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+  <script type="text/javascript" src="./script.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
-<script type="text/javascript" src="./script.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
 <style>
   .indent-1 {float: left;}
   .indent-1 section {width: 50%; float: left;}
@@ -24,8 +27,98 @@
   </header>
 
 
+<!-- INPUT ABDE --> 
+
+<div class="container-input">
+    <h2 class="title">Input</h2>
+    <!-- <ul>
+        <li><a href="#" id="inputString" onclick="inputActivated()" >Price</a></li>
+        <li><a href="#" id="outputString" onclick="outputActivated()">Tariff</a></li>
+    </ul> -->
+    
+    <div class="lenght range_slider" data-min="0" data-max="100">
+        <div class="title field-title" data-length='0'>Price Shift Alpha:</div>
+        <input class= "slider" type="range" name="slider" id="range_weight" value="0" min="0" max="100" step="20" 
+            oninput="range_slider_value.value = range_weight.value" >
+        <output   class="range_slider_value" id="range_slider_value">0</output>
+    </div>
+
+    <div class="lenght range_slider" data-min="0" data-max="100">
+        <div class="title field-title" data-length='0'>Price Shift Beta:</div>
+        <input class= "slider" type="range" name="slider" id="range_weight2" value="0" min="0" max="100" step="20" 
+            oninput="range_slider_value2.value = range_weight2.value" >
+        <output class="range_slider_value"  id="range_slider_value2">0</output>
+    </div>
+    <div class="lenght range_slider" data-min="0" data-max="100">
+        <div class="title field-title" data-length='0'>Price Shift Gamma:</div>
+        <input class= "slider" type="range" name="slider" id="range_weight3" value="0" min="0" max="100" step="20" 
+            oninput="range_slider_value3.value = range_weight3.value" >
+        <output class="range_slider_value"  id="range_slider_value3">0</output>
+    </div>
+    <div class="lenght range_slider" data-min="0" data-max="100">
+        <div class="title field-title" data-length='0'>Price Shift Epsilon:</div>
+        <input class= "slider" type="range" name="slider" id="range_weight4" value="0" min="0" max="100" step="20" 
+            oninput="range_slider_value4.value = range_weight4.value" >
+        <output class="range_slider_value"  id="range_slider_value4">0</output>
+    </div>
+    <div class="lenght range_slider" data-min="0" data-max="100">
+        <div class="title field-title" data-length='0'>Price Shift Mobile:</div>
+        <input class= "slider" type="range" name="slider" id="range_weight5" value="0" min="0" max="100" step="20" 
+            oninput="range_slider_value5.value = range_weight5.value" >
+        <output class="range_slider_value"  id="range_slider_value5">0</output>
+    </div>
+    <div class="lenght range_slider" data-min="0" data-max="100">
+        <div class="title field-title" data-length='0'>Price Shift Iota:</div>
+        <input class= "slider" type="range" name="slider" id="range_weight6" value="0" min="0" max="100" step="20" 
+            oninput="range_slider_value6.value = range_weight6.value" >
+        <output class="range_slider_value"  id="range_slider_value6">0</output>
+    </div>
+    <div class="lenght range_slider" data-min="0" data-max="100">
+        <div class="title field-title" data-length='0'>Price Shift Tetha:</div>
+        <input class= "slider" type="range" name="slider" id="range_weight7" value="0" min="0" max="100" step="20" 
+            oninput="range_slider_value7.value = range_weight7.value" >
+        <output class="range_slider_value"  id="range_slider_value7">0</output>
+    </div>
+    <div class="lenght range_slider" data-min="0" data-max="100">
+        <div class="title field-title" data-length='0'>Price Shift Iota:</div>
+        <input class= "slider" type="range" name="slider" id="range_weight8" value="0" min="0" max="100" step="20" 
+            oninput="range_slider_value8.value = range_weight8.value" >
+        <output class="range_slider_value"  id="range_slider_value8">0</output>
+    </div>
+    
+    <script>
+      function myFunction() {
+        document.getElementById("range_weight").value = "0";
+        document.getElementById("range_weight2").value = "0";
+        document.getElementById("range_weight3").value = "0";
+        document.getElementById("range_weight4").value = "0";
+        document.getElementById("range_weight5").value = "0";
+        document.getElementById("range_weight6").value = "0";
+        document.getElementById("range_weight7").value = "0";
+        document.getElementById("range_weight8").value = "0";
+
+        document.getElementById("range_slider_value").innerHTML = "0";
+        document.getElementById("range_slider_value2").innerHTML = "0";
+        document.getElementById("range_slider_value3").innerHTML = "0";
+        document.getElementById("range_slider_value4").innerHTML = "0";
+        document.getElementById("range_slider_value5").innerHTML = "0";
+        document.getElementById("range_slider_value6").innerHTML = "0";
+        document.getElementById("range_slider_value7").innerHTML = "0";
+        document.getElementById("range_slider_value8").innerHTML = "0";
+        
+        console.log("reset button is pressed reset all value!")
+      }
+     
+
+  
+    </script>
+    <button type="reset" onclick="myFunction()" class="btn reset" id="reset">Reset</button>
+</div>
+
+<!-- INPUT ABDE --> 
+
 <section class="indent-1">
-    <!-- Section 1 --> 
+      <!-- Section 1 --> 
     <section>
       <div id="input">
         <table  id= "tableInput" cellspacing="30">
