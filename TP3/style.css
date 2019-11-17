@@ -183,14 +183,18 @@ img {
 	height: 100;
 }
 
-
-
 #bar-chart-horizontal_B {
-	max-width:400;
-	max-height:250;
+	max-width: 400;
+	max-height: 250;
 	-moz-transform: scale(-1, 1);
 	-webkit-transform: scale(-1, 1);
 	-o-transform: scale(-1, 1);
 	-ms-transform: scale(-1, 1);
 	transform: scale(-1, 1);
-  }
+}
+footer {
+	clear: both;
+	position: relative;
+	height: 20px;
+	margin-top: -200px;
+}
