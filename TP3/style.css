@@ -183,17 +183,34 @@ img {
 	height: 100;
 }
 #bar-chart-horizontal_B {
-	max-width: 400;
-	max-height: 250;
-	-moz-transform: scale(-1, 1);
+	max-width: 40;
+	max-height: 25;
+	/* -moz-transform: scale(-1, 1);
 	-webkit-transform: scale(-1, 1);
 	-o-transform: scale(-1, 1);
 	-ms-transform: scale(-1, 1);
-	transform: scale(-1, 1);
+	transform: scale(-1, 1); */ /* this is useless*/
+
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	bottom: -190px;
+	right: 25%;
+	left: 35%;
+	margin-left: 100px;
 }
+#bar-chart-horizontal_A {
+	margin-left: 50px;
+	width: 400px;
+	height: 400px;
+	bottom: -10px;
+	right: 25%;
+	left: 35%;
+}
+
 #bar-graph {
-	width: 800px;
-	height: 600px;
+	max-width: 40;
+	max-height: 25;
 	padding: 20px 25px;
 }
 
