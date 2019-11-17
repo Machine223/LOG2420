@@ -176,14 +176,13 @@ function SwitchGraph() {
 	barHorizontal_A = document.getElementById('bar-chart-horizontal_A');
 	barHorizontal_B = document.getElementById('bar-chart-horizontal_B');
 
-	if (barHorizontal_A.style.display === 'block' && barHorizontal_B.style.display === 'block'){
-		barHorizontal_A.style.display = "none";
-		barHorizontal_B.style.display = "none";
+	if (barHorizontal_A.style.display === 'block' && barHorizontal_B.style.display === 'block') {
+		barHorizontal_A.style.display = 'none';
+		barHorizontal_B.style.display = 'none';
 		barGraph_.style.display = 'block';
-	}
-	else{
-		barHorizontal_A.style.display = "block";
-		barHorizontal_B.style.display = "block";
+	} else {
+		barHorizontal_A.style.display = 'block';
+		barHorizontal_B.style.display = 'block';
 		barGraph_.style.display = 'none';
 	}
 }
