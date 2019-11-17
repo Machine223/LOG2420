@@ -93,7 +93,6 @@ footer {
 	}
 }
 
-
 #bar-graph {
 	width: 400;
 	height: 800;
@@ -246,6 +245,9 @@ a:hover {
 	transform: translateY(-6%);
 	box-shadow: 0 4px 10px rgba(255, 255, 255, 0.288);
 }
+.button {
+	background-color: #4caf50;
+}
 
 .container-output {
 	margin: 40px 0;
@@ -254,5 +256,4 @@ a:hover {
 	padding: 25px 25px;
 	background: rgb(198, 208, 218);
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.45), 0 4px 8px rgba(0, 0, 0, 0.35), 0 8px 12px rgba(0, 0, 0, 0.15);
-	text-transform: uppercase;
 }
