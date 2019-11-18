@@ -72,7 +72,6 @@ footer {
 
 /* CODE ABDE */
 .container-input {
-	float: left;
 	margin: 40px 0;
 	width: 800px;
 	height: 1000px;
@@ -205,7 +204,6 @@ a:hover {
 }
 
 .container-output {
-	float: left;
 	margin: 40px 0;
 	width: 800px;
 	height:1000px;
@@ -213,15 +211,7 @@ a:hover {
 	background: rgb(198, 208, 218);
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.45), 0 4px 8px rgba(0, 0, 0, 0.35), 0 8px 12px rgba(0, 0, 0, 0.15);
 }
-.container-Summury{
-	float: left;
-	margin: 40px 0;
-	width: 400px;
-	height:1000px;
-	padding: 25px 25px;
-	background: rgb(198, 208, 218);
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.45), 0 4px 8px rgba(0, 0, 0, 0.35), 0 8px 12px rgba(0, 0, 0, 0.15);
-}
+
 footer {
 	clear: both;
 	position: relative;
