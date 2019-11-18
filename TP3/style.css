@@ -32,7 +32,9 @@ nav ul {
 	padding: 10px;
 }
 
-
+p.oblique {
+	font-style: oblique;
+}
 
 /* Style the footer */
 footer {
@@ -41,8 +43,6 @@ footer {
 	text-align: center;
 	color: white;
 }
-
-
 
 #bar-graph {
 	width: 400;
@@ -193,7 +193,6 @@ a:hover {
 	font-size: 1.1em;
 }
 .btn.reset:active {
-
 	transform: translateY(-6%);
 	box-shadow: 0 4px 10px rgba(255, 255, 255, 0.288);
 }
@@ -206,7 +205,7 @@ a:hover {
 .container-output {
 	margin: 40px 0;
 	width: 800px;
-	height:1000px;
+	height: 1000px;
 	padding: 25px 25px;
 	background: rgb(198, 208, 218);
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.45), 0 4px 8px rgba(0, 0, 0, 0.35), 0 8px 12px rgba(0, 0, 0, 0.15);
