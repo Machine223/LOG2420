@@ -257,3 +257,13 @@ a:hover {
 	background: rgb(198, 208, 218);
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.45), 0 4px 8px rgba(0, 0, 0, 0.35), 0 8px 12px rgba(0, 0, 0, 0.15);
 }
+footer {
+	clear: both;
+	position: relative;
+	height: 20px;
+	margin-top: -200px;
+}
+
+#color {
+	color: black;
+}
