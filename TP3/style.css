@@ -31,39 +31,7 @@ nav ul {
 	padding: 10px;
 }
 
-#input {
-	display: block;
-	/* float: left; */
-}
 
-#inputOption {
-	float: left;
-	font-weight: bold;
-}
-
-#outputOption {
-	float: left;
-}
-
-#array1 {
-	color: blue;
-	font-weight: bold;
-}
-
-#array2 {
-	color: blue;
-	font-weight: bold;
-}
-/* Clear floats after the columns */
-section:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-.tdOutput {
-	white-space: nowrap;
-	font-weight: bold;
-}
 
 /* Style the footer */
 footer {
@@ -73,45 +41,27 @@ footer {
 	color: white;
 }
 
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 900px) {
-	nav,
-	article {
-		width: 100%;
-		height: auto;
-	}
-	#inputOption {
-		float: left;
-		padding-right: 10%;
-	}
 
-	#outputOption {
-		float: left;
-	}
-	p {
-		padding: 15px;
-	}
-}
 
 #bar-graph {
 	width: 400;
 	height: 800;
-	max-width: 800;
-	max-height: 400;
+	max-width: 700;
+	max-height: 800;
 }
 
 #bar-chart-horizontal_A {
-	width: 800;
-	height: 1600;
-	max-width: 800;
-	max-height: 1600;
+	width: 700;
+	height: 800;
+	max-width: 700;
+	max-height: 800;
 }
 
 #bar-chart-horizontal_B {
-	width: 800;
-	height: 1600;
-	max-width: 800;
-	max-height: 1600;
+	width: 700;
+	height: 800;
+	max-width: 700;
+	max-height: 800;
 	-moz-transform: scale(-1, 1);
 	-webkit-transform: scale(-1, 1);
 	-o-transform: scale(-1, 1);
@@ -121,10 +71,11 @@ footer {
 
 /* CODE ABDE */
 .container-input {
+	float: left;
 	margin: 40px 0;
-	width: 400px;
-	height: 800px;
-	padding: 25px 25px;
+	width: 800px;
+	height: 1000px;
+	padding: 50px 50px;
 	background: rgb(52, 54, 56);
 	/* border-radius: 10px; */
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.45), 0 4px 8px rgba(0, 0, 0, 0.35), 0 8px 12px rgba(0, 0, 0, 0.15);
@@ -250,9 +201,19 @@ a:hover {
 }
 
 .container-output {
+	float: left;
+	margin: 40px 0;
+	width: 800px;
+	height:1000px;
+	padding: 25px 25px;
+	background: rgb(198, 208, 218);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.45), 0 4px 8px rgba(0, 0, 0, 0.35), 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+.container-Summury{
+	float: left;
 	margin: 40px 0;
 	width: 400px;
-	height: 800px;
+	height:1000px;
 	padding: 25px 25px;
 	background: rgb(198, 208, 218);
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.45), 0 4px 8px rgba(0, 0, 0, 0.35), 0 8px 12px rgba(0, 0, 0, 0.15);
