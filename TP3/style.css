@@ -4,6 +4,7 @@
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
+	background-color: rgb(36, 37, 37);
 }
 
 /* Style the header */
@@ -193,10 +194,13 @@ a:hover {
 	font-size: 1.1em;
 }
 .btn.reset:active {
+
 	transform: translateY(-6%);
 	box-shadow: 0 4px 10px rgba(255, 255, 255, 0.288);
 }
 .button {
+	padding-left: 0px;
+
 	background-color: #4caf50;
 }
 

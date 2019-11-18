@@ -76,7 +76,7 @@ function createGraph() {
 			legend: { display: false },
 			title: {
 				display: false,
-				text: ''
+				text: 'Price ($CAD)'
 			},
 			scales: {
 				xAxes: [
@@ -114,7 +114,7 @@ function createGraph() {
 			legend: { display: false },
 			title: {
 				display: false,
-				text: ''
+				text: 'Price ($CAD)'
 			},
 			scales: {
 				xAxes: [
