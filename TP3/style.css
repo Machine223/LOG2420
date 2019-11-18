@@ -34,6 +34,8 @@ nav ul {
 
 p.oblique {
 	font-style: oblique;
+	color: rgb(255, 248, 248);
+	text-transform: uppercase;
 }
 
 /* Style the footer */
